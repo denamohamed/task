@@ -239,6 +239,20 @@ section.sec-four div {
 
 /* -------- Media Queries --------*/
 @media (max-width: 1200px) {
+      section.sec-one {
+    height: 900px;
+  }
+
+    .thumbnail {
+    width: 50%;
+    height: 250px;
+  }
+
+  .slides {
+    display: flex;
+    height: 650px;
+  }
+
   section.sec-three div.div-two + div {
     display: flex;
     gap: 5px;
@@ -284,9 +298,6 @@ section.sec-four div {
       "section3";
     grid-template-columns: 1fr;
   }
-  section.sec-one {
-    height: 600px;
-  }
 
   section.sec-one,
   section.sec-two,
@@ -303,15 +314,6 @@ section.sec-four div {
     margin-block: 20px;
   }
 
-  .thumbnail {
-    width: 50%;
-    height: 100px;
-  }
-
-  .slides {
-    display: flex;
-    height: 450px;
-  }
 }
 @media (max-width: 800px) {
   nav {
@@ -320,16 +322,16 @@ section.sec-four div {
     background-color: white;
   }
 
-  section.sec-one{
-    height: 450px;
+@media (max-width: 500px) {
+  nav {
+    padding-inline: 10px;
+  }
+  nav div ul {
+    gap: 5px;
   }
 
-  section.sec-one,
-  section.sec-two,
-  section.sec-three,
-  section.sec-four {
-    margin-inline: 15px;
-    padding-right: 10px;
+    section.sec-one {
+    height: 600px;
   }
 
   .thumbnail {
@@ -339,8 +341,18 @@ section.sec-four div {
 
   .slides {
     display: flex;
-    height: 350px;
+    height: 450px;
   }
+
+}
+  section.sec-one,
+  section.sec-two,
+  section.sec-three,
+  section.sec-four {
+    margin-inline: 15px;
+    padding-right: 10px;
+  }
+
 }
 
 @media (max-width: 500px) {
@@ -351,8 +363,4 @@ section.sec-four div {
     gap: 5px;
   }
 
-  .thumbnail {
-    width: 100%;
-    height: 80px;
-  }
-}
+ 
