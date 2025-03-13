@@ -1,0 +1,324 @@
+
+
+/* ------- shared ----- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.green {
+  color: green;
+}
+.yellow {
+  color: yellow;
+}
+.black {
+  color: black;
+}
+.semi-bold {
+  font-weight: 600;
+}
+.line-through {
+  text-decoration: line-through;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: gray;
+}
+
+/* -------- Navbar --------*/
+nav {
+  z-index: 999999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-block: 30px;
+  padding-inline: 20px;
+  background-color: white;
+}
+nav div ul {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+
+/* -------- main grid --------*/
+
+main {
+  margin-top: 85px;
+  display: grid;
+  gap: 15px;
+  grid-template-areas:
+    "section1  section3"
+    "section1  section3"
+    "section2  section3";
+  grid-template-columns: 1.5fr 0.75fr;
+}
+
+/* -------- container of sec 1 and 2 --------*/
+
+div.container-sections {
+  grid-area: section3;
+  border: 1px solid rgb(202, 202, 202);
+  border-radius: 10px;
+  padding: 15px;
+  height: 100%;
+}
+
+/* -------- section one --------*/
+
+section.sec-one{
+    height: 700px;
+    margin-inline: 25px;
+    padding-right: 20px;
+}
+
+/* -------- slider --------*/
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.slides {
+  display: flex;
+  height: 550px;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.thumbnail {
+    width: 25%;
+    height: 150px;
+}
+  
+.thumbnail img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* -------- section two --------*/
+
+section.sec-two {
+  grid-area: section2;
+  margin-inline: 25px;
+  padding-right: 20px;
+}
+section.sec-two h2{
+    margin-bottom: 15px;
+}
+
+p.text {
+  padding-block: 15px;
+}
+
+
+/* -------- section three --------*/
+
+section.sec-three div.div-one {
+  grid-area: section1;
+}
+
+img.logo {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  margin-bottom: 15px;
+}
+
+section.sec-three div.div-one,
+section.sec-three div.div-one div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+section.sec-three div.div-one + h3 {
+  margin-bottom: 10px;
+}
+section.sec-three div.div-two {
+  display: flex;
+  gap: 5px;
+  margin-block: 15px;
+}
+section.sec-three div.div-two + div {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+div.green-button {
+  background-color: rgb(203, 230, 195);
+  color: green;
+  display: inline;
+  padding-inline: 5px;
+  padding-block: 2px;
+  border-radius: 7px;
+  font-weight: 500;
+}
+
+section.sec-three div.div-four {
+  background-color: rgb(243, 243, 243);
+  padding: 25px;
+  margin-top: 50px;
+  margin-right: 20px;
+  border-radius: 15px;
+}
+section.sec-three div.div-four div {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding-block: 10px;
+  padding-inline: 15px;
+  border: none;
+  font-size: 17px;
+  border-radius: 15px;
+  width: 100%;
+}
+
+button {
+  color: white;
+  background-color: #c07e04;
+  padding-block: 10px;
+  padding-inline: 15px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border: none;
+  font-size: 17px;
+  border-radius: 15px;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* -------- list --------*/
+
+section.sec-three div.div-four ul {
+  list-style-type: none;
+}
+section.sec-three div.div-four ul li {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* -------- section four --------*/
+section.sec-four {
+  margin-right: 20px;
+  margin-top: 50px;
+}
+
+section.sec-four div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(243, 243, 243);
+  margin-block: 10px;
+  padding-block: 10px;
+  border-radius: 10px;
+  padding-inline: 15px;
+}
+
+
+
+/* -------- Media Queries --------*/
+@media (max-width: 960px) {
+    section.sec-three div.div-two + div {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+section.sec-three div.div-four {
+  padding-block: 15px;
+  padding-inline: 10px;
+}
+
+button {
+  font-size: 15px;
+}
+
+/* -------- section four --------*/
+section.sec-four {
+  margin-right: 5px;
+}
+
+section.sec-four div {
+  font-size: 14px;
+}
+section.sec-two {
+  padding-right: 15px;
+}
+
+p.text {
+  padding-block: 10px;
+  font-size: 15px;
+}
+
+}
+
+@media (max-width: 800px) {
+    main {
+        grid-template-areas:
+            "section1"
+            "section2"
+            "section3";
+        grid-template-columns: 1fr;
+    }
+    section.sec-one{
+       height: 600px;
+       margin-inline: 15px;
+       padding-right: 10px;
+    }
+
+    .thumbnail {
+        width: 50%; 
+        height: 100px;
+    }
+
+    .slides {
+       display: flex;
+       height: 450px;
+    }
+
+}
+
+@media (max-width: 500px) {
+nav {
+  padding-block: 30px;
+  padding-inline: 10px;
+  background-color: white;
+}
+nav div ul {
+    display: flex;
+    gap: 5px;
+}
+
+
+    .thumbnail {
+        width: 100%; 
+        height: 80px; 
+    }
+}
+
